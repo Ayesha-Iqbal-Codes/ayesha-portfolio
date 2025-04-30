@@ -1,0 +1,78 @@
+/* src/App.css */
+:root {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --primary-accent: #8b5cf6;
+  --secondary-accent: #ec4899;
+}
+
+html, body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+nav a {
+  display: inline-flex; /* Use inline-flex to allow flex properties */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  width: 2.5rem; /* Set the width of the circle */
+  height: 2.5rem; /* Set the height of the circle */
+  padding: 0; /* Remove any extra padding */
+  border-radius: 50%; /* Make the link circular */
+}
+
+nav a.active {
+  background-color: purple; /* Purple background for active link */
+  color: white; /* White text for active link */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/* Add this CSS to your global styles */
+.glowing-effect {
+  box-shadow: 0 0 10px 2px rgba(131, 59, 202, 0.8), 0 0 20px 4px rgba(181, 20, 209, 0.8);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+
+/* Smooth scrolling for the whole app */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--primary-accent);
+  outline-offset: 2px;
+}
+
+/* Responsive typography */
+@media (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@keyframes pulse-fast {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.7; }
+}
+
+.animate-pulse-fast {
+  animation: pulse-fast 0.6s ease-in-out infinite;
+}
