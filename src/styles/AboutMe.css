@@ -53,10 +53,27 @@
 }
 
 @keyframes border-pulse {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.7; }
+  0%, 100% { 
+    opacity: 0.3;
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(126, 34, 206, 0.2);
+  }
+  50% { 
+    opacity: 0.7;
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(167, 139, 250, 0.3);
+  }
 }
 
 .animate-border-pulse {
   animation: border-pulse 6s ease-in-out infinite;
+}
+
+/* Circular hover effects */
+.hover-glow-circle {
+  transition: box-shadow 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-glow-circle:hover {
+  box-shadow: 0 0 30px rgba(124, 58, 237, 0.3);
 }

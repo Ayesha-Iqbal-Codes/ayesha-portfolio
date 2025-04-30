@@ -1,19 +1,18 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion'; 
-import AboutMe from '../components/AboutMe'; // Capitalized
-import ContactMe from '../components/ContactMe'; // Capitalized
-import TechStack from '../components/TechStack'; // Capitalized
-import Projects from '../components/Projects'; // Capitalized
-import SkillsPercentage from '../components/Skills'; // Changed from 'skill'
-import WorkExperience from '../components/WorkExperience'; // Capitalized
-import Education from '../components/Education'; // Capitalized
-import Navbar from '../components/Navbar'; // Capitalized
+import AboutMe from '../components/AboutMe';
+import ContactSection from '../components/ContactSection'; // Updated
+import TechStack from '../components/TechStack';
+import Projects from '../components/Projects';
+import SkillsPercentage from '../components/Skills';
+import WorkExperience from '../components/WorkExperience';
+import Education from '../components/Education';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer'; // ✅ New Footer import
 import '../App.css';
 import { FaArrowRight } from 'react-icons/fa';
 import { TypeAnimation } from 'react-type-animation';
 import { Link as ScrollLink } from 'react-scroll';
-
-
 
 const Homepage = () => {
   const [activeLink, setActiveLink] = useState('home');
@@ -37,7 +36,7 @@ const Homepage = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); 
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -49,16 +48,16 @@ const Homepage = () => {
         <div className="max-w-4xl w-full mt-[-2%]">
           <motion.div
             className="flex flex-col items-center md:items-start"
-            initial={{ opacity: 0, y: 50 }} 
-            animate={{ opacity: 1, y: 0 }}  
-            transition={{ duration: 1, ease: 'easeOut' }} 
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: 'easeOut' }}
           >
             <motion.p
               className="text-3xl md:text-4xl font-light text-purple-600 mb-4 md:mb-6 text-left md:ml-[-1rem] lg:ml-[-2rem]"
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.2, delay: 0.1 }}
-              whileHover={{ scale: 1.1, color: '#d6bcfa' }} 
+              whileHover={{ scale: 1.1, color: '#d6bcfa' }}
             >
               Hey there, it's
             </motion.p>
@@ -68,7 +67,7 @@ const Homepage = () => {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.4, delay: 0.2 }}
-              whileHover={{ scale: 1.05, color: '#d6bcfa' }} 
+              whileHover={{ scale: 1.05, color: '#d6bcfa' }}
             >
               Ayesha Iqbal
             </motion.h1>
@@ -78,7 +77,7 @@ const Homepage = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.6, delay: 0.3 }}
-              whileHover={{ scale: 1.05, color: '#d6bcfa' }} 
+              whileHover={{ scale: 1.05, color: '#d6bcfa' }}
             >
               <TypeAnimation
                 sequence={[
@@ -99,7 +98,7 @@ const Homepage = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.8, delay: 0.4 }}
-              whileHover={{ scale: 1.05, color: '#d6bcfa' }} 
+              whileHover={{ scale: 1.05, color: '#d6bcfa' }}
             >
               Passionate about transforming ideas into engaging web experiences.
             </motion.p>
@@ -110,12 +109,12 @@ const Homepage = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.5 }}
-            whileHover={{ scale: 1.05 }} 
+            whileHover={{ scale: 1.05 }}
           >
             <ScrollLink
-              to="projects" 
-              smooth={true} 
-              duration={500} 
+              to="projects"
+              smooth={true}
+              duration={500}
               className="bg-purple-800 text-white py-3 px-8 text-lg font-bold rounded-full flex items-center transition-transform hover:scale-110 hover:bg-white hover:text-purple-800 cursor-pointer"
             >
               <span className="mr-2">See My Projects</span>
@@ -125,7 +124,6 @@ const Homepage = () => {
         </div>
       </section>
 
-      {/* Rest of your sections remain unchanged */}
       <section id="about" className="py-6 md:py-8">
         <AboutMe />
       </section>
@@ -150,12 +148,11 @@ const Homepage = () => {
         <Education />
       </section>
 
-      <section id="contact" className="bg-purple-950 text-white py-0 md:py-0">
-        <ContactMe />
-        <div className="text-center mt-1">
-          <p className="text-base md:text-lg">&copy; 2025 Ayesha Iqbal. All rights reserved.</p>
-        </div>
+      <section id="contact" className="py-0 md:py-0">
+        <ContactSection />
       </section>
+
+      <Footer /> {/* ✅ Final footer component */}
     </div>
   );
 };
