@@ -1,12 +1,12 @@
 // src/App.jsx
 import Homepage from './pages/Home';
 import { Analytics } from "@vercel/analytics/react";
-import CosmicMouseTrail from './components/CosmicMouseTrail';
+import ElegantPointerTrail from './components/ElegantPointerTrail';
 
 const App = () => {
   return (
     <div className="relative">
-      <CosmicMouseTrail />
+      <ElegantPointerTrail />
       <Homepage />
       <Analytics />
     </div>
