@@ -34,7 +34,7 @@ const About = () => {
       <div className="max-w-6xl mx-auto md:px-5">
         {/* About Me Heading */}
         <div className="text-center mb-8">
-          <h2 className={`text-4xl md:text-5xl font-bold text-white transition-colors duration-300 hover:text-purple-900 transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <h2 className={`text-5xl md:text-6xl font-bold mb-8 text-gray-100 font-cinzel transition-transform duration-300 hover:text-purple-800 transform hover:scale-110'}`}>
             About Me
           </h2>
         </div>

@@ -15,7 +15,7 @@ const WorkExperience = () => {
   return (
     <section id="work-experience" className="min-h-screen bg-black text-white pt-0 py-12 px-4 md:px-8">
   <div className="max-w-6xl mx-auto">
-    <h1 className="text-center text-4xl md:text-5xl font-bold mb-6 text-gray-100 font-cinzel transition-transform duration-300 hover:text-purple-800 transform hover:scale-110">
+    <h1 className="text-center text-4xl sm:text-5xl md:text-6xl font-bold mb-10 text-gray-100 font-cinzel transition-transform duration-300 hover:text-purple-800 transform hover:scale-90">
       Work Experience
     </h1>
     

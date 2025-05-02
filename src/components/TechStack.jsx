@@ -56,16 +56,16 @@ const TechStack = () => {
           }
         }
         .tech-item {
-          animation: floatIn 3s ease-in-out forwards;
+          animation: floatIn 1.5s ease-in-out forwards;
           opacity: 0;
         }
       `}</style>
       
       <div className="w-full p-4 sm:px-4 md:px-32 lg:px-48 text-center">
         <h1 
-          className="text-5xl md:text-6xl font-bold mb-10 text-gray-100 font-cinzel"
+          className="text-5xl md:text-6xl font-bold mb-8 text-gray-100 font-cinzel transition-transform duration-300 hover:text-purple-800 transform hover:scale-110"
           style={{
-            animation: 'floatIn 3.5s ease-out 0.5s forwards',
+            animation: 'floatIn 1.5s ease-out 0.5s forwards',
             opacity: 0
           }}
         >
@@ -77,8 +77,8 @@ const TechStack = () => {
               key={index}
               className="tech-item flex flex-col items-center hover:scale-125 transform transition duration-700 ease-in-out"
               style={{ 
-                animationDelay: `${index * 0.3 + 1}s`,
-                transitionDelay: `${index * 0.05}s` 
+                animationDelay: `${index * 0.2 + 0.5}s`,
+                transitionDelay: `${index * 0.03}s` 
               }}
             >
               {item.icon}

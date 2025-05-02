@@ -12,7 +12,7 @@ const Education = () => {
         </h1>
 
         {/* SZABIST University */}
-        <div className="flex flex-col md:flex-row items-center mb-10">
+        <div className="flex flex-col md:flex-row items-center mb-10 -mt-6">
           <div className="flex-shrink-0 w-20 h-20 md:w-28 md:h-28 mb-4 md:mb-0 md:mr-6">
             <img 
               src={SZABISTLogo} 
