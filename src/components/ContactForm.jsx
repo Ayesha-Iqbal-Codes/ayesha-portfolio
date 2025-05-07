@@ -82,7 +82,7 @@ const ContactForm = () => {
 
       <form 
         onSubmit={handleSubmit} 
-        className="w-full max-w-md -mt-6 bg-gradient-to-br from-purple-900 to-black p-4 rounded-xl shadow-2xl space-y-6 border border-purple-500/20"
+        className="w-full max-w-sm -mt-2 bg-gradient-to-br from-purple-900 to-black p-4 rounded-xl shadow-2xl space-y-6 border border-purple-500/20"
       >
         <div className="space-y-4">
           <div>
@@ -95,7 +95,7 @@ const ContactForm = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full bg-black/50 text-white border border-purple-900/50 focus:border-purple-500 p-3 rounded-lg focus:ring-2 focus:ring-purple-600 outline-none transition-all"
+              className="w-full bg-black/50 text-white border border-purple-900/50 focus:border-purple-500 p-2 rounded-lg focus:ring-2 focus:ring-purple-600 outline-none transition-all"
             />
           </div>
 
@@ -109,7 +109,7 @@ const ContactForm = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full bg-black/50 text-white border border-purple-900/50 focus:border-purple-500 p-3 rounded-lg focus:ring-2 focus:ring-purple-600 outline-none transition-all"
+              className="w-full bg-black/50 text-white border border-purple-900/50 focus:border-purple-500 p-2 rounded-lg focus:ring-2 focus:ring-purple-600 outline-none transition-all"
             />
           </div>
 
@@ -122,7 +122,7 @@ const ContactForm = () => {
               value={formData.message}
               onChange={handleChange}
               required
-              className="w-full bg-black/50 text-white border border-purple-900/50 focus:border-purple-500 p-3 rounded-lg focus:ring-2 focus:ring-purple-600 outline-none transition-all min-h-[120px]"
+              className="w-full bg-black/50 text-white border border-purple-900/50 focus:border-purple-500 p-2 rounded-lg focus:ring-2 focus:ring-purple-600 outline-none transition-all min-h-[120px]"
             />
           </div>
         </div>
@@ -130,7 +130,7 @@ const ContactForm = () => {
         <button 
           type="submit" 
           disabled={isSubmitting}
-          className={`w-full bg-gradient-to-r from-purple-600 to-purple-800 text-white px-6 py-3 rounded-lg font-medium hover:from-purple-700 hover:to-purple-900 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-black transition-all ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+          className={`w-full bg-gradient-to-r from-purple-600 to-purple-800 text-white px-4 py-2 rounded-lg font-medium hover:from-purple-700 hover:to-purple-900 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-black transition-all ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
         >
           {isSubmitting ? (
             <span className="flex items-center justify-center">

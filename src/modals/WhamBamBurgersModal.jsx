@@ -3,7 +3,7 @@ import React from 'react';
 const WhamBamBurgersModal = ({ onClose }) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center px-4">
-      <div className="bg-[#140103] rounded-xl w-full max-w-3xl p-6 relative shadow-lg overflow-y-auto max-h-[80vh] no-scrollbar">
+      <div className="bg-gray-900 rounded-xl w-full max-w-3xl p-6 relative shadow-lg overflow-y-auto max-h-[80vh] no-scrollbar">
         <button
           onClick={onClose}
           className="absolute top-2 right-4 text-2xl font-bold text-white hover:text-red-600"
@@ -11,7 +11,7 @@ const WhamBamBurgersModal = ({ onClose }) => {
           ×
         </button>
 
-        <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-center text-purple-800 font-serif">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-center text-blue-800 font-serif">
           🍔 Wham Bam Burgers – Fast Food Ordering Website
         </h2>
 
