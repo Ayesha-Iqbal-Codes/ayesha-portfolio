@@ -64,7 +64,7 @@ const Skills = () => {
   return (
     <div
       ref={skillsRef}
-      className="min-h-screen bg-black text-white flex flex-col items-center justify-start p-4 pt-8 sm:pt-0" 
+      className="min-h-screen bg-black text-white flex flex-col items-center justify-start p-4 pt-28 sm:pt-0" 
     >
       <h1 className="text-5xl md:text-6xl font-bold mb-8 text-gray-100 font-cinzel transition-transform duration-300 hover:text-purple-800 transform hover:scale-110">
         Skills & Proficiency

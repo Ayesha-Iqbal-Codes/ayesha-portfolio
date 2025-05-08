@@ -81,8 +81,9 @@ nav a.active {
 }
 
 section {
-  padding: 2rem 1rem; /* Top & bottom spacing, with some horizontal padding */
+  padding: 0.25rem 0.5rem; /* 4px top/bottom, 8px left/right */
 }
+
 
 @media (min-width: 768px) {
   section {
